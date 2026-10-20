@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple temperature converter for Celsius, Fahrenheit, and Kelvin.">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="converter-card">
+        <div class="thermometer" aria-hidden="true">🌡️</div>
+
+        <h1>Temperature Converter</h1>
+        <p class="subtitle">Convert temperatures easily</p>
+
+        <form id="converter-form">
+            <div class="field">
+                <label for="temperature">Enter temperature</label>
+                <input
+                    type="number"
+                    id="temperature"
+                    placeholder="Enter a value"
+                    step="any"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="from-unit">From</label>
+                <select id="from-unit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="to-unit">To</label>
+                <select id="to-unit">
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="C">Celsius (°C)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="convert-btn">
+                    Convert
+                </button>
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+        </form>
+
+        <p id="error-message" class="error" role="alert" hidden></p>
+
+        <section class="result-box" aria-live="polite">
+            <p class="result-label">Converted Temperature</p>
+            <p id="result">--</p>
+        </section>
+
+        <p class="footer">Made with HTML, CSS &amp; JavaScript</p>
+    </main>
+</body>
+</html>
